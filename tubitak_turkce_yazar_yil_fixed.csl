@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0.1">
+  <info>
+    <title>TÜBİTAK (Türkçe, Yazar–Yıl)</title>
+    <id>http://www.zotero.org/styles/tubitak-turkce-yazar-yil</id>
+    <link href="http://www.zotero.org/styles/harvard-cite-them-right" rel="template"/>
+    <author>
+      <name>ChatGPT</name>
+    </author>
+    <category citation-format="author-date"/>
+    <summary>TÜBİTAK uyumlu, Türkçe, yazar–yıl formatında referans stili</summary>
+    <updated>2025-11-05</updated>
+    <language>tr-TR</language>
+  </info>
+
+  <locale xml:lang="tr">
+    <terms>
+      <term name="and">ve</term>
+      <term name="editor" form="short">der.</term>
+      <term name="retrieved">erişim</term>
+      <term name="from">-</term>
+      <term name="references">Kaynakça</term>
+    </terms>
+  </locale>
+
+  <macro name="author">
+    <names variable="author">
+      <name and="text" delimiter=", "/>
+    </names>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" quotes="true" suffix="."/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+
+  <citation>
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <group delimiter=", ">
+        <names variable="author">
+          <name and="text" initialize-with="."/>
+        </names>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </group>
+    </layout>
+  </citation>
+
+  <bibliography hanging-indent="true">
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout>
+      <group delimiter=" ">
+        <names variable="author">
+          <name and="text" delimiter=", " initialize-with="."/>
+        </names>
+        <text macro="issued" prefix=" (" suffix=")."/>
+        <text macro="title" suffix=" "/>
+        <group delimiter=", ">
+          <text macro="container-title"/>
+          <group delimiter=", ">
+            <text variable="volume"/>
+            <text variable="issue" prefix="(" suffix=")"/>
+            <text variable="page" prefix=", " />
+          </group>
+        </group>
+      </group>
+    </layout>
+  </bibliography>
+</style>
