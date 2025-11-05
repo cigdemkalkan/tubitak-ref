@@ -4,14 +4,13 @@
        version="1.0.1"
        class="in-text">
   <info>
-    <title>TÜBİTAK (Türkçe, Yazar–Yıl)</title>
+    <title>Tubitak (Turkce, Yazar-Yil)</title>
     <id>http://www.zotero.org/styles/tubitak-turkce-yazar-yil</id>
-    <link href="http://www.zotero.org/styles/harvard-cite-them-right" rel="template"/>
     <author>
       <name>ChatGPT</name>
     </author>
     <category citation-format="author-date"/>
-    <summary>TÜBİTAK uyumlu, Türkçe, yazar–yıl formatında referans stili</summary>
+    <summary>TUBITAK uyumlu, Turkce, yazar-yil referans stili</summary>
     <updated>2025-11-05</updated>
     <language>tr-TR</language>
   </info>
@@ -51,10 +50,10 @@
       <key variable="author"/>
       <key variable="issued"/>
     </sort>
-    <layout prefix="(" suffix=")" delimiter="; ">
+    <layout prefix="(" suffix=")" delimiter=", ">
       <group delimiter=", ">
         <names variable="author">
-          <name and="text" initialize-with="."/>
+          <name and="text"/>
         </names>
         <date variable="issued">
           <date-part name="year"/>
@@ -71,7 +70,7 @@
     <layout>
       <group delimiter=" ">
         <names variable="author">
-          <name and="text" delimiter=", " initialize-with="."/>
+          <name and="text" delimiter=", "/>
         </names>
         <text macro="issued" prefix=" (" suffix=")."/>
         <text macro="title" suffix=" "/>
@@ -80,7 +79,7 @@
           <group delimiter=", ">
             <text variable="volume"/>
             <text variable="issue" prefix="(" suffix=")"/>
-            <text variable="page" prefix=", " />
+            <text variable="page" prefix=", "/>
           </group>
         </group>
       </group>
